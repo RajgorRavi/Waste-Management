@@ -1,0 +1,67 @@
+*
+{
+margin: 0;
+padding:0;
+box-sizing:border-box;
+}
+
+body
+{
+    font-size: 14px ;
+    background: #e9e3e3;
+}
+
+.container{
+    background: white;
+    width: 500px;
+    padding:25px;
+    margin: 50px auto 0;
+    border-top: 5px solid blue;
+    box-shadow : 0 0 10px 8px rgba(157, 152, 152, 0.5);
+}
+
+.container h2{
+    font-size: 24px;
+    line-height: 24px;
+    padding: 30px ;
+    text-align: center;
+}
+#getOtpButton{
+  background-color: rgba(0, 128, 255, 0.772);
+  color: wheat;
+  padding: 10px 20px 10px 20px;
+  border-radius: 10px;
+}
+
+.form-group{
+    width:90%;
+    position: relative;
+    margin: 20px auto;
+}
+
+.form-control
+{
+ border: 1px solid #cccccc ;
+}
+
+.form-control:hover, .btn btn-success:hover
+{
+  background-color: #fafafa;
+}
+
+.form-control:focus, .btn btn-success:focus
+{
+ border: 1px solid blue ;
+}
+
+.btn btn-primary{
+    background-color: blue;
+}
+
+.btn btn-primary{
+    background-color: blue;
+}
+
+.btn btn-success{
+    background-color: blue;
+}

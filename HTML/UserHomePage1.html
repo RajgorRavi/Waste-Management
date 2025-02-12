@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eco Waste Management System</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../Style/USER/homepage1.css">
+  <style>
+    /* Chatbot iframe styling */
+    .chatbot-container {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      width: 400px; /* Increased width */
+      height: 600px; /* Increased height */
+      z-index: 1000;
+      border: none;
+      border-radius: 10px 10px 0 0;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      display: none;
+      transition: all 0.3s ease;
+    }
+    .chatbot-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #279400;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 70px; /* Increased width */
+      height: 70px; /* Increased height */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 36px; /* Increased font size */
+      cursor: pointer;
+      z-index: 1001;
+    }
+    .chatbot-button:hover {
+      background-color: #1D1F54;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <h3>Waste<span style="height: 15px;">X</span>pert<img src="../Style/User/images/trash-44040_640.png" alt="EcoSmart Logo"> </h3><!-- Replace with your logo path -->
+    </div>
+    <ul class="nav-links">
+      <li>
+        <a href="#home">Home</a>
+      </li>
+      <li>
+        <a href="#features">Waste Segregation</a>
+        <ul class="submenu">
+          <li><a href="https://visualizertwo-uq9xaejbl8q5ckwnd3hv4h.streamlit.app/">AI <img src="../Style/User/images/chip.png" width="20px" height="20px"> model</a></li>
+          <li><a href="#segregation2">Remind my <img src="../Style/User/images/trash.png" style="width: 40px; height: 40px;"></a></li>
+          <li><a href="#segregation3">Select Waste</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#disposal">Disposal</a>
+        <ul class="submenu">
+          <li><a href="./userSchedule.html">Scheduling</a></li>
+          <li><a href="./binLocatorhome1.html">Bin <img src="../Style/User/images/map.png" style="width: 40px; height: 40px;"></a></li>
+          <li><a href="#disposal3">Emergency <img src="../Style/User/images/waste.png" style="width: 50px; height: 40px;"></a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#sanitation">Sanitation</a>
+        <ul class="submenu">
+          <div style="display: flex;"> 
+            <li><a href="./marketExchange.html"> <img src="../Style/User/images/store.png" style="width: 40px; height: 40px;">BUY</a></li>
+            <li><a href="./wasteSellerSection.html"> <img src="../Style/User/images/SELL.png" style="width: 40px; height: 40px;">SELL</a></li>
+          </div>
+          <li><a href="https://bot.dialogflow.com/983f699c-0656-412a-90f8-d587194c404a" target="_blank">CHAT <img src="../Style/User/images/cpu.png" style="width: 40px; height: 40px;"></a></li>
+          <li><a href="./report.html">REPORT <img src="../Style/User/images/bad-review.png" width="40px" height="40px"></a></li>
+        </ul>
+      </li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  
+  <!-- Hero Section -->
+  <section class="image-section">
+    <div class="overlay">
+        <h1>WasteXpert</h1>
+      <h2>EcoSmart Waste Management System</h2>
+      <p><i>Empowering India: Smart Solutions for Sustainable Waste Management.</i></p>
+    </div>
+  </section>
+  
+  <!-- Features Section -->
+  <section class="features" id="features">
+    <h2>Our Features</h2>
+    <div class="feature-cards">
+      <div class="card">
+        <img src="../Style/User/images/image-recogintion.png" alt="Waste Segregation" class="feature-image">
+        <h3>AI-Powered Waste Segregation</h3>
+        <p>Classify waste types through image recognition technology and segregate accordingly for better waste management.</p>
+        <a href="https://visualizertwo-uq9xaejbl8q5ckwnd3hv4h.streamlit.app/" class="btn">Start Segregating</a>
+      </div>
+      <div class="card">
+        <img src="../Style/User/images/disposal.png" alt="EcoBin Finder" class="feature-image">
+        <h3>Smart Waste Disposal</h3>
+        <p>Find the nearest dustbins and dispose of your waste efficiently with our disposal assistance tool.</p>
+        <a href="./WasteDisposal/wasteDisposal/index.html" class="btn">Sustainable</a>
+      </div>
+      <div class="card">
+        <img src="../Style/User/images/sanitation.png" alt="Sanitize Smart" class="feature-image">
+        <h3>Improved Sanitation</h3>
+        <p>Contribute to community-driven sanitation efforts and help create a healthier environment for all.</p>
+        <a href="#" class="btn">Sanitize Smart</a>
+      </div>
+    </div>
+  </section>
+  
+  <hr>
+  <!-- Footer Section -->
+  <footer style="background-color: #f8f9fa; padding: 20px; text-align: center; font-family: 'Poppins', sans-serif;">
+    <div class="footer-container" style="max-width: 1200px; margin: auto;">
+        <div class="social-media" style="margin-bottom: 15px;">
+            <a href="https://www.facebook.com" target="_blank" style="margin: 0 10px; text-decoration: none; color: #3b5998;">Facebook</a>
+            <a href="https://www.twitter.com" target="_blank" style="margin: 0 10px; text-decoration: none; color: #1DA1F2;">Twitter</a>
+            <a href="https://www.instagram.com" target="_blank" style="margin: 0 10px; text-decoration: none; color: #C13584;">Instagram</a>
+            <a href="https://www.linkedin.com" target="_blank" style="margin: 0 10px; text-decoration: none; color: #0077b5;">LinkedIn</a>
+        </div>
+        <div class="pages-links" style="margin-bottom: 15px;">
+            <a href="index.html" style="margin: 0 10px; text-decoration: none; color: #007bff;">Home</a>
+            <a href="about.html" style="margin: 0 10px; text-decoration: none; color: #007bff;">About Us</a>
+            <a href="services.html" style="margin: 0 10px; text-decoration: none; color: #007bff;">Services</a>
+            <a href="contact.html" style="margin: 0 10px; text-decoration: none; color: #007bff;">Contact</a>
+        </div>
+        <div class="office-address" style="font-size: 14px; color: #6c757d;">
+            <p>WasteXpert Management Solution</p>
+            <p>123 Eco Lane, Goregaon</p>
+            <p>Green City, MUMBAI 401208</p>
+            <p>Email: info@wastexpert.com | Phone: (980) 456-7890</p>
+        </div>
+    </div>
+  </footer>
+
+  <!-- Chatbot Button -->
+  <div class="chatbot-button" onclick="toggleChatbot()">💬</div>
+
+  <!-- Chatbot iFrame -->
+  <iframe id="chatbot" class="chatbot-container" src="https://console.dialogflow.com/api-client/demo/embedded/983f699c-0656-412a-90f8-d587194c404a" frameborder="0"></iframe>
+
+  <script>
+    function toggleChatbot() {
+      var chatbot = document.getElementById('chatbot');
+      if (chatbot.style.display === 'none') {
+        chatbot.style.display = 'block';
+      } else {
+        chatbot.style.display = 'none';
+      }
+    }
+  </script>
+</body>
+</html>

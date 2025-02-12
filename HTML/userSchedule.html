@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garbage Management Website</title>
+    <link rel="stylesheet" href="../Style/USER/Schedule/style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">Garbage Management</div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Schedule</a></li>
+            <li><a href="#">Contact</a></li>
+            <li id="cart-link"><a href="#">Reminder</a><span id="cart-count">0</span></li>
+            <li><a href="https://ranjan-mishra-dev.github.io/waste-report/index0.html" id="map-link">Download Reports</a></li>
+        </ul>
+        <input type="text" class="search-bar" placeholder="Search...">
+    </header>
+
+    <section class="main-banner">
+        <img src="#" alt="">
+        <div class="banner-text">
+            <h1>Efficient Waste Management for a Cleaner Tomorrow</h1>
+            <a href="#" class="cta-button">Learn More</a>
+        </div>
+    </section>
+
+    <main class="main-content">
+        <h2>Schedule</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Main City</th>
+                    <th>Location</th>
+                    <th>Time</th>
+                    <th>Reminder</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>City A</td>
+                    <td>Location 1</td>
+                    <td>10:00 AM</td>
+                    <td><button class="reminder-btn" data-city="City A" data-location="Location 1" data-time="11:00 AM">Set Reminder</button></td>
+                </tr>
+                <tr>
+                    <td>City B</td>
+                    <td>Location 2</td>
+                    <td>10:00 AM</td>
+                    <td><button class="reminder-btn" data-city="City A" data-location="Location 2" data-time="11:00 AM">Set Reminder</button></td>
+                </tr>
+                <tr>
+                    <td>City C</td>
+                    <td>Location 3</td>
+                    <td>11:00 AM</td>
+                    <td><button class="reminder-btn" data-city="City B" data-location="Location 3" data-time="11:00 AM">Set Reminder</button></td>
+                </tr>
+                <tr>
+                    <td>City D</td>
+                    <td>Location 4</td>
+                    <td>11:00 AM</td>
+                    <td><button class="reminder-btn" data-city="City B" data-location="Location 3" data-time="11:00 AM">Set Reminder</button></td>
+                </tr>
+            </tbody>
+        </table>
+
+        
+    </main>
+
+    
+
+    <div class="cart-modal" id="cart-modal">
+        <div class="cart-content">
+            <h2>Cart</h2>
+            <ul id="cart-items"></ul>
+            <button id="checkout-btn">Checkout</button>
+        </div>
+    </div>
+
+    <script src="../Script/User/schedule.js"></script>
+</body>
+</html>

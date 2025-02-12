@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waste Collection Alerts & Optimization</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Add Leaflet CSS for Map Integration -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="../Style/EmpAlertSection/style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo-title">
+            <h1>Waste Collection Alerts & Optimization</h1>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Reports</a></li>
+                <li><a href="#">Employee Portal</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Help</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Search and Filter Bar -->
+    <div class="search-filter-bar">
+        <input type="text" placeholder="Search location, container ID, or area">
+        <div class="filters">
+            <label>Urgency:
+                <select>
+                    <option value="all">All</option>
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                </select>
+            </label>
+            <label>Waste Type:
+                <select>
+                    <option value="all">All</option>
+                    <option value="plastic">Plastic</option>
+                    <option value="metal">Metal</option>
+                    <option value="paper">Paper</option>
+                </select>
+            </label>
+            <label>Date Range:
+                <input type="date">
+            </label>
+        </div>
+    </div>
+
+
+    <div class="content">
+        
+        <div class="map-container">
+            <div id="map"></div>
+            <div id="controls">
+              <button id="nextButton">Next</button>
+            </div>
+        </div>
+
+        <!-- Right Column: Data and Analytics -->
+        <div class="data-analytics">
+            <div class="route-details">
+                <h3>Route Details</h3>
+                <ul id="route-list">
+                    <li>Container 1: Urgent, Plastic</li>
+                    <li>Container 2: Medium, Metal</li>
+                    <li>Container 3: Low, Paper</li>
+                </ul>
+                <div class="estimates">
+                    <p>Estimated Time: <span id="time-estimate">45 minutes</span></p>
+                    <p>Estimated Fuel: <span id="fuel-estimate">3.5 liters</span></p>
+                </div>
+            </div>
+            <div class="analytics-widgets">
+                <div class="widget">
+                    <h4>Fule Consumed</h4>
+                    <div class="chart-placeholder"></div>
+                </div>
+                <div class="widget">
+                    <h4>Time Estimator</h4>
+                    <div class="chart-placeholder">Time Required</div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Contact Us</a>
+        </div>
+        <div class="real-time-notifications">
+            <p>Latest Updates: Container 4532 collected, Route updated due to traffic.</p>
+        </div>
+    </footer>
+
+    <!-- Include Leaflet JS for Map Integration -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="../Script/EmployeeAlert/script.js"></script>
+</body>
+</html>

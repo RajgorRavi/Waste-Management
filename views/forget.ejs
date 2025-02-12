@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forgot Password</title>
+  <link rel="stylesheet" href="../Style/forget.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Forgot Password</h2>
+    
+    <form action="/send-otp" method="POST" id="recoverForm">
+       
+      <div class="form-group">
+        <label for="recoverEmail">Email ID:</label>
+        <input type="email" id="recoverEmail" name="email" class="form-control" required>
+      </div>
+
+      
+      <div class="form-group">
+        <label for="employeeId">Employee ID:</label>
+        <input type="text" id="employeeId" name="employeeId" class="form-control" required>
+      </div>
+
+     
+      <div class="form-group">
+        <button type="submit" id="getOtpButton" class="btn btn-primary">Get OTP</button>
+      </div>
+    </form>
+
+    <form action="/verify-otp" method="POST" id="otpForm">
+      
+      <div class="form-group">
+        <label for="otp">Enter OTP:</label>
+        <input type="text" id="otp" name="otp" class="form-control" required>
+      </div>
+
+      
+      <div class="form-group">
+        <button type="submit" id="verifyOtpButton" class="btn btn-primary">Verify OTP</button>
+      </div>
+    </form>
+
+    <form action="/change-password" method="POST" id="changePasswordForm">
+      
+      <div class="form-group">
+        <label for="newPassword">New Password:</label>
+        <input type="password" id="newPassword" name="newPassword" class="form-control" required>
+      </div>
+
+      
+      <div class="form-group">
+        <label for="confirmPassword">Confirm New Password:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" class="form-control" required>
+      </div>
+
+    
+      <div class="form-group">
+        <button type="submit" id="changePasswordButton" class="btn btn-success">Change Password</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

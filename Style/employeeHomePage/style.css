@@ -1,0 +1,197 @@
+/* General Reset and Styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  height: 100vh;
+  background-color: #f5f5f5;
+}
+
+/* Container for Sidebar and Main Content */
+.container {
+  display: flex;
+  width: 100%;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  width: 250px;
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar .header {
+  padding: 20px;
+  background-color: #34495e;
+  border-bottom: 1px solid #1abc9c;
+}
+
+.sidebar .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.sidebar .search-bar {
+  padding: 20px;
+  background-color: #16a085;
+  border-bottom: 1px solid #1abc9c;
+}
+
+.sidebar .search-bar input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+
+.sidebar .navigation ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar .navigation ul li {
+  padding: 10px 20px;
+}
+
+.sidebar .navigation ul li a {
+  color: #ecf0f1;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: background 0.3s;
+}
+
+.sidebar .navigation ul li a:hover {
+  background-color: #16a085;
+  border-radius: 5px;
+}
+
+.sidebar .navigation ul li a i {
+  margin-right: 10px;
+}
+
+/* Main Content Styling */
+.main-content {
+  flex: 1;
+  padding: 20px;
+  background-color: #ffffff;
+  overflow-y: auto;
+}
+
+/* Notifications Section */
+.notifications {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.notifications .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #dcdcdc;
+  padding-bottom: 10px;
+}
+
+.notifications h2 {
+  margin: 0;
+  color: #2c3e50;
+}
+
+.notifications .close {
+  cursor: pointer;
+  color: #e74c3c;
+}
+
+.notifications .content {
+  margin-top: 20px;
+  padding: 10px;
+  border-bottom: 1px solid #dcdcdc;
+}
+
+.notifications .content:last-child {
+  border-bottom: none;
+}
+
+.notifications .button {
+  background-color: #3498db;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+.notifications .button:hover {
+  background-color: #2980b9;
+}
+
+/* Candidates Section */
+.candidates {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table thead {
+  background-color: #34495e;
+  color: #ffffff;
+}
+
+.table th, .table td {
+  padding: 10px;
+  text-align: left;
+}
+
+.table th {
+  border-bottom: 2px solid #2c3e50;
+}
+
+.table td {
+  border-bottom: 1px solid #dcdcdc;
+}
+
+.table .icon {
+  width: 24px;
+  height: 16px;
+}
+
+.table .cover-letter {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.table .cover-letter:hover {
+  text-decoration: underline;
+}
+
+.table button {
+  background-color: #2ecc71;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+.table button:hover {
+  background-color: #27ae60;
+}

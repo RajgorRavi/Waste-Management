@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Style/USER/Binlocator/style2.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <title>Document</title>
+</head>
+<body>
+    <div class="trash">
+        <h1>Trash & Recycling Drop-off Locations</h1>
+        <p>Find the nearest drop-off locations for your trash and recycling needs using our interactive map. Simply enter your address below to locate convenient waste containers for organic, recyclable, and e-waste materials.</p>
+        <p>Efficiently managing waste is crucial for our environment. By finding the right drop-off points, you contribute to effective recycling and proper disposal, helping to reduce landfill use and support sustainability efforts.</p>
+    </div>
+    <div class="find-location">
+      <div class="location"><img width="50" height="50" src="https://img.icons8.com/ios/50/marker--v1.png" alt="marker--v1"/>
+        <h1>Find Location Near You</h1>
+    </div>
+      
+    <fieldset > 
+          <legend for="f">Facility Search</legend>
+
+            <form action="">
+                <input type="text" id="text" placeholder="Shree Sai Residency, Plot No. 123, Sector 15">
+            </form>
+            
+    </fieldset>
+      
+        <div class="radio">
+            <input type="radio" id="Recycle" name="Recycle" checked>
+            <label for="Recycle">Recycling </label>
+            <input type="radio" id="Disposal" name="Recycle" checked>
+            <label for="Disposal">Trash Disposal </label>
+        </div>
+        <div class="map">
+            <div class="showmap"></div>          
+        </div>
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="../Script/EmpViewMap/script.js"></script>
+</body>
+</html>

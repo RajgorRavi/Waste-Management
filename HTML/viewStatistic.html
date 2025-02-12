@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waste Management System - Show Report</title>
+    <link rel="stylesheet" href="../Style/EmployeeStastic/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="heading">Waste Segregation Report</h1>
+
+        <!-- Waste Type Buttons -->
+        <div class="waste-buttons">
+            <button class="waste-btn" id="plastic" onclick="changeWasteType('plastic'); changeGraph('plastic')">Plastic</button>
+            <button class="waste-btn" id="metal" onclick="changeWasteType('metal'); changeGraph('metal')">Metal</button>
+            <button class="waste-btn" id="paper" onclick="changeWasteType('paper'); changeGraph('paper')">Paper</button>
+        </div>
+
+        <!-- Graph Section -->
+        <div class="graph-section">
+            <h2 id="graph-title">Plastic Waste Segregation (Weekly)</h2>
+            <div id="graph-container" style="display: flex; align-items: center; justify-content:center;">
+                <canvas id="plasticGraph" width="400" height="200"></canvas>
+                <canvas id="metalGraph" width="400" height="200" style="display:none;"></canvas>
+                <canvas id="paperGraph" width="400" height="200" style="display:none;"></canvas>
+            </div>
+        </div>
+
+        <!-- Time View Buttons -->
+        <div class="time-view-buttons">
+            <button class="view-btn" onclick="changeTimeView('week')">Week View</button>
+            <button class="view-btn" onclick="changeTimeView('month')">Month View</button>
+            <button class="view-btn" onclick="changeTimeView('year')">Year View</button>
+        </div>
+
+        <!-- Statistics Section -->
+        <div class="statistics-section">
+            <h2>Area-wise Waste Generation</h2>
+            <div id="pie-chart-container" style="display: flex; align-items: center; justify-content: center;">
+               <canvas id="pieChart"></canvas>
+            </div>
+        </div>
+
+        <!-- Additional Details Section -->
+        <div class="additional-details">
+            <div class="detail-box">
+                <h3>Recycling Efficiency</h3>
+                <p>The efficiency of plastic waste recycling has improved by 15% this year, reducing overall waste sent to landfills.</p>
+            </div>
+            <div class="detail-box">
+                <h3>Segregation Accuracy</h3>
+                <p>Metal waste segregation accuracy is currently at 92%, thanks to recent community awareness campaigns</p>
+            </div>
+            <div class="detail-box">
+                <h3>Environmental Impact</h3>
+                <p>Proper paper waste segregation has saved approximately 1,000 trees in the past month, contributing significantly to environmental conservation.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="../Script/EmployeeStastic/script.js"></script>
+    <!-- <script src="graphChart.js"></script>/ -->
+    <!-- <script src="pieChart.js"></script> -->
+</body>
+</html>

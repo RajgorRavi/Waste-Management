@@ -1,0 +1,175 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waste Management System</title>
+   
+    <link rel="stylesheet" href="/css/styles.css">
+
+</head>
+<style>
+  body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+</style>
+<body>-
+    <header>
+        <h1>Welcome to the Waste Management System</h1>
+        <p>Manage and track waste collection efficiently.</p>
+    </header>
+
+    <section class="auth-forms">
+        
+        <div class="tabs">
+          <a href="/" class="tab-button">Login</a>
+          <a href="/signup" class="tab-button">Sign Up</a>
+      </div>
+      
+
+    
+        <div id="login-form" class="form-container">
+            <h2>Login</h2>
+            <form action="/login" method="POST">
+                <div class="form-group">
+                    <label for="login-id">Employee Id:</label>
+                    <input type="text" id="login-id" name="employeeId" placeholder="Enter your id" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password:</label>
+                    <input type="password" id="login-password" name="password" placeholder="Enter your password" required>
+                </div>
+                <button type="submit">Login</button>
+                <p><a href="/forgetpassword">Forgot Password?</a></p>
+            </form>
+        </div>
+
+       
+    </section>
+
+    
+    
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waste Management System</title>
+    <link rel="shortcut icon" href="../Style/indexCss/pngwing.com.png" type="image/x-icon">
+    <link rel="stylesheet" href="../Style/indexCss/index.css">
+
+</head>
+<style>
+  body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+</style>
+<body>
+    <header>
+        <div id="nav-link">
+            <img id="logo" src="../Style/indexCss/pngwing.com.png" alt="">
+            <a href="#">Home</a>
+            <select name="service" id="service">
+                <option value="Service">Service</option>
+                <option value="Residential Services">Residential Services</option>
+                <option value="Commercial Services">Commercial Services</option>
+            </select>
+            <a href="/">About</a>
+        </div>
+      
+        
+        <!-- Tabs for Signup and Login -->
+        <div class="tabs">
+            <a href="/" class="tab-button" >Login</a>
+            <a href="/signup" class="tab-button">Sign Up</a>
+            <a href="../HTML/UserHomePage1.html" class="tab-button">Continue as User</a>
+        </div>
+    </header>
+    <div class="Animation">
+        <div id="H1"><h1>Welcome to the Waste Management System</h1></div>
+        <div id="P"><p>Manage and track waste collection efficiently.</p></div>
+        
+    </div>
+   
+    <!-- Signup and Login Forms -->
+    <section class="auth-forms">
+        <!--Front page only one video or Name of website-->
+        <div class="web-metadata">
+            <video autoplay muted loop src="../Style/indexCss/westagevideo.mp4"></video>
+        </div>    
+
+
+
+
+
+
+
+
+        <!-- Login Form (Default Visible) -->
+        <div id="login-form" class="form-container">
+            <h2 id="head-login">Login</h2>
+            <form action="/login" method="POST" >
+                <div class="form-group">
+                    <label for="login-id">Employee Id:</label>
+                    <br>
+                    <input type="text" id="login-id" name="employeeId" placeholder="Enter your id" required>
+
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password:</label>
+                    <br>
+                    <input type="password" id="login-password" name="password" placeholder="Enter your password" required>
+                </div>
+                <button type="submit">Login</button>
+                <p>Don't have an password?<a href="/forgetpassword">Forgot Password?</a></p>
+            </form>
+        </div>
+
+        <!-- Signup Form (Initially Hidden) -->
+        <!-- <div id="signup-form" class="form-container" style="display:none;">
+            <h2>Sign Up</h2>
+            <form action="/signup" method="POST">
+                <div class="form-group">
+                    <label for="signup-name">Full Name:</label>
+                    <input type="text" id="signup-name" name="name" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-email">Email:</label>
+                    <input type="email" id="signup-email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-password">Password:</label>
+                    <input type="password" id="signup-password" name="password" placeholder="Create a password" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-confirm-password">Confirm Password:</label>
+                    <input type="password" id="signup-confirm-password" name="confirmPassword" placeholder="Confirm your password" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-employee-id">Employee ID:</label>
+                    <input type="text" id="signup-employee-id" name="employeeId" placeholder="Enter your employee ID (if required)">
+                </div>
+                <button type="submit">Sign Up</button>
+                <p><a href="#" id="switch-to-login">Already have an account? Login here.</a></p>
+            </form>
+        </div> -->
+    </section>
+    <marquee behavior="" direction="">
+        Improved Operational Efficiency,   Cost ReductionRegulatory,   ComplianceEnhanced Brand Image,     Boosted Employee Morale,   Increased Business Opportunities,  Environmental Benefits,  Innovation and Resource Recovery:
+    </marquee>
+<div class="manajment">
+    <h1>Waste Management System</h1>
+    <div class="westimage">
+        <img src="../Style/indexCss/image1.jpg" alt="">
+        <img src="../Style/indexCss/image2.jpg" alt="">
+        <img src="../Style/indexCss/image3.jpg" alt="">
+        <iframe src="https://www.youtube.com/embed/8krzjlHaGes?autoplay=1" frameborder="0"></iframe>
+    </div>
+</div>
+    <!-- Link to JS file -->
+    <script src="/js/scripts.js"></script>
+</body>
+</html>

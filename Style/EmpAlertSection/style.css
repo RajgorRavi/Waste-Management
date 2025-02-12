@@ -1,0 +1,163 @@
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  color: #2B2E74;
+}
+
+header {
+  background-color: #1abc9c;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-title {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 50px;
+  margin-right: 20px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li {
+  margin: 0 10px;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.search-filter-bar {
+  background-color: #f4f4f4;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+}
+
+.search-filter-bar input[type="text"] {
+  width: 53%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.filters label {
+  margin-left: 20px;
+}
+
+.filters select,
+.filters input[type="date"] {
+  margin-left: 5px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.content {
+  display: flex;
+  padding: 20px;
+}
+
+.map-container {
+  width: 60%;
+  padding-right: 20px;
+}
+
+#map {
+  height: 500px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.data-analytics {
+  width: 40%;
+}
+
+.route-details {
+  background-color: #f4f4f4;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.route-details ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.route-details ul li {
+  margin-bottom: 10px;
+}
+
+.route-details .estimates {
+  margin-top: 15px;
+}
+
+.analytics-widgets {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.widget {
+  width: 100%;
+  background-color: #f4f4f4;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.chart-placeholder {
+  background-color: #ddd;
+  height: 100px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #666;
+}
+
+.historical-data {
+  background-color: #f4f4f4;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  background-color: #2B2E74;
+}
+
+.footer-links a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.real-time-notifications {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+

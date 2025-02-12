@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Locator</title>
+    <link rel="stylesheet" href="../Style/EmpViewMap/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+    <div class="search-container">
+        <input type="text" class="search-box" placeholder="Search for a city or locality">
+        <button class="search-button">Search</button>
+        <button class="current-location-button">Use My Location</button>
+    </div>
+
+    <div class="content">
+        <div class="address-column">
+            <h2>Address</h2>
+            <p>Shree Sai Residency No. 12, Sector 22, Dwarka</p>
+            <p>Sapphire Heights Block 5, Plot No. 34, Kalyani Nagar,</p>
+            <p>Palm Springs Society Phase 3, Flat No. 45, Sector 56,</p>
+            <p>Silver Oak Apartments Building 7, No. 103, J.P. Nagar, </p>
+            <p>Sunrise Meadows Plot 24, Near Adyar Bus Depot,</p>
+            <!-- Add more addresses as needed -->
+            <button class="toggle-address-list">Hide Addresses</button>
+        </div>
+
+        <div class="map-column">
+            <h2>Map</h2>
+            <div class="map-controls">
+                <button class="map-view-button" data-view="street">Street View</button>
+                <button class="map-view-button" data-view="satellite">Satellite View</button>
+            </div>
+            <div id="map"></div>
+            <div class="map-legend">
+                <h3>Map Legend</h3>
+                <ul>
+                    <li>🏠 Residential Area</li>
+                    <li>🏢 Commercial Area</li>
+                    <li>🌳 Park</li>
+                    <!-- Add more legend items as needed -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="../Script/EmpViewMap/script.js"></script>
+</body>
+</html>

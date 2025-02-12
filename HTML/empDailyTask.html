@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Daily Tasks</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ <link rel="stylesheet" href="../Style/EmpDailyTask/style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <div class="header">
+        <div class="logo">Dash Board</div>
+      </div>
+      <div class="search-bar">
+        <input type="text" placeholder="Search" />
+      </div>
+      <div class="navigation">
+        <ul>
+          <li><a href="#"><i class="fa-solid fa-user"></i>User Profile</a></li>
+          <li><a href="empDailyTask.html"><i class="fa-solid fa-list-check"></i>View Daily Task</a></li>
+          <li><a href="../HTML/empViewMap.html"><i class="fa-solid fa-map-location-dot"></i>View Pickup</a></li>
+          <li><a href="#"><i class="fa-solid fa-bars-progress"></i>View WasteStock</a></li>
+          <li><a href="../HTML/empAlertSection.html"><i class="fa-solid fa-circle-exclamation"></i>Alert</a></li>
+          <li><a href="#"><i class="fas fa-bell"></i>Notifications</a></li>
+          <li><a href="#"><i class="fas fa-envelope"></i>Inbox</a></li>
+          <li><a href="../HTML/viewStatistic.html"><i class="fas fa-chart-bar"></i>Statistic</a></li>
+          <li><a href="#"><i class="fas fa-sticky-note"></i>Notes</a></li>
+          <li><a href="#"><i class="fas fa-download"></i>Downloaded reports</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="main-section">
+      <div class="daily-tasks">
+        <h2>Employee Daily Tasks</h2>
+        
+        <!-- Add New Task -->
+        <div class="add-task">
+          <input type="text" id="task-input" placeholder="Add new task..." />
+          <button id="add-task-btn">Add Task</button>
+        </div>
+        
+        <!-- Task Filters -->
+        <div class="task-filters">
+          <select id="task-filter">
+            <option value="all">All Tasks</option>
+            <option value="completed">Completed Tasks</option>
+            <option value="pending">Pending Tasks</option>
+          </select>
+        </div>
+
+        <!-- Task List -->
+        <div class="task-list">
+          <ul id="task-list">
+            <!-- Example Tasks -->
+            <li>
+              <input type="checkbox" id="task-1" />
+              <label for="task-1">Task 1: Finish report</label>
+              <span class="task-status">Pending</span>
+            </li>
+            <li>
+              <input type="checkbox" id="task-2" />
+              <label for="task-2">Task 2: Prepare presentation</label>
+              <span class="task-status">Pending</span>
+            </li>
+          </ul>
+        </div>
+        
+        <!-- Task Summary -->
+        <div class="task-summary">
+          <h3>Task Summary</h3>
+          <p>Total Tasks: <span id="total-tasks">2</span></p>
+          <p>Completed Tasks: <span id="completed-tasks">0</span></p>
+          <p>Pending Tasks: <span id="pending-tasks">2</span></p>
+        </div>
+
+        <!-- Calendar -->
+        <div class="calendar-container">
+          <h3>Calendar</h3>
+          <div class="calendar">
+            <div class="day">Sun</div>
+            <div class="day">Mon</div>
+            <div class="day">Tue</div>
+            <div class="day">Wed</div>
+            <div class="day">Thu</div>
+            <div class="day">Fri</div>
+            <div class="day">Sat</div>
+            <div class="date">1</div>
+            <div class="date">2</div>
+            <div class="date selected">3</div>
+            <div class="date">4</div>
+            <div class="date">5</div>
+            <div class="date">6</div>
+            <div class="date">7</div>
+            <!-- Add more dates as needed -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="../Script/employeeDailyTask.js"></script>
+</html>

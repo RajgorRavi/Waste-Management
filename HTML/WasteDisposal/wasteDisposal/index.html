@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waste Management Portal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #2B2E74;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        section {
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #2B2E74;
+        }
+        .button {
+            background-color: #2B2E74;
+            color: white;
+            padding: 10px 15px;
+            text-align: center;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .button:hover {
+            background-color: #1f2060;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 500px;
+            text-align: center;
+        }
+        .modal-close {
+            margin-top: 20px;
+            padding: 10px 15px;
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .modal-close:hover {
+            background-color: darkred;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Waste Management Portal</h1>
+    <p>Your hub for sustainable waste disposal and recycling</p>
+</header>
+
+<!-- Recycling Facilities Section -->
+<section>
+    <h2>Recycling Facilities</h2>
+    <p>We work with facilities for plastic, metal, glass, and paper recycling.</p>
+    <button class="button" onclick="openModal('recyclingModal')">Learn More</button>
+</section>
+
+<!-- Composting for Organic Waste -->
+<section>
+    <h2>Composting for Organic Waste</h2>
+    <p>Our partners convert food scraps and green waste into valuable compost.</p>
+    <button class="button" onclick="openModal('compostingModal')">Learn More</button>
+</section>
+
+<!-- Waste-to-Energy Plants -->
+<section>
+    <h2>Waste-to-Energy Plants</h2>
+    <p>Turning waste into renewable energy through our waste-to-energy plant partners.</p>
+    <button class="button" onclick="openModal('energyModal')">Learn More</button>
+</section>
+
+<!-- Landfill Management -->
+<section>
+    <h2>Landfill Management</h2>
+    <p>For non-recyclable waste, we ensure proper landfill management.</p>
+    <button class="button" onclick="openModal('landfillModal')">Learn More</button>
+</section>
+
+<!-- Upcycling Collaborations -->
+<section>
+    <h2>Upcycling Collaborations</h2>
+    <p>Our upcycling partners turn waste into valuable new products like bricks and stationery.</p>
+    <button class="button" onclick="openModal('upcyclingModal')">Learn More</button>
+</section>
+
+<!-- Segregation Guidelines -->
+<section>
+    <h2>Segregation Guidelines</h2>
+    <p>Learn how to properly segregate waste for recycling, composting, or energy generation.</p>
+    <button class="button" onclick="openModal('segregationModal')">Learn More</button>
+</section>
+
+<!-- Partnerships with NGOs -->
+<section>
+    <h2>Partnerships with NGOs</h2>
+    <p>Collaborating with NGOs for community-driven waste disposal and education efforts.</p>
+    <button class="button" onclick="openModal('ngoModal')">Learn More</button>
+</section>
+
+<!-- Smart Bin Integration -->
+<section>
+    <h2>Smart Bin Integration</h2>
+    <p>Discover smart bin technology for waste segregation and optimization.</p>
+    <button class="button" onclick="openModal('smartbinModal')">Learn More</button>
+</section>
+
+<!-- E-Waste Disposal Partners -->
+<section>
+    <h2>E-Waste Disposal Partners</h2>
+    <p>Safely dispose of electronic waste with our e-waste partners.</p>
+    <button class="button" onclick="openModal('ewasteModal')">Learn More</button>
+</section>
+
+<!-- Waste Management as a Service -->
+<section>
+    <h2>Waste Management as a Service</h2>
+    <p>Providing end-to-end waste management services for corporations and housing societies.</p>
+    <button class="button" onclick="openModal('wmserviceModal')">Learn More</button>
+</section>
+
+<!-- Disposal Statistics Dashboard -->
+<section>
+    <h2>Disposal Statistics Dashboard</h2>
+    <p>View real-time data on the waste collected, segregated, recycled, and converted into energy.</p>
+    <button class="button" onclick="openModal('dashboardModal')">Learn More</button>
+</section>
+
+<!-- CSR Initiatives by Corporations -->
+<section>
+    <h2>CSR Initiatives by Corporations</h2>
+    <p>See how companies contribute to waste reduction through Corporate Social Responsibility (CSR) initiatives.</p>
+    <button class="button" onclick="openModal('csrModal')">Learn More</button>
+</section>
+
+<!-- Modal Templates -->
+<div class="modal" id="recyclingModal">
+    <div class="modal-content">
+        <h2>Recycling Facilities</h2>
+        <p>Information about our partners who recycle plastic, metal, glass, and paper.</p>
+        <button class="modal-close" onclick="closeModal('recyclingModal')">Close</button>
+    </div>
+</div>
+
+<div class="modal" id="compostingModal">
+    <div class="modal-content">
+        <h2>Composting Centers</h2>
+        <p>Learn about our composting partners and how they convert organic waste into valuable compost.</p>
+        <button class="modal-close" onclick="closeModal('compostingModal')">Close</button>
+    </div>
+</div>
+
+<div class="modal" id="energyModal">
+    <div class="modal-content">
+        <h2>Waste-to-Energy Plants</h2>
+        <p>Find out how our partners turn waste into renewable energy through biogas and pyrolysis.</p>
+        <button class="modal-close" onclick="closeModal('energyModal')">Close</button>
+    </div>
+</div>
+
+<!-- More modals go here for other sections -->
+
+<script>
+    function openModal(modalId) {
+        document.getElementById(modalId).style.display = 'flex';
+    }
+
+    function closeModal(modalId) {
+        document.getElementById(modalId).style.display = 'none';
+    }
+</script>
+
+</body>
+</html>

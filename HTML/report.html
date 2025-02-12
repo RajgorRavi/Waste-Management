@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Style/USER/report/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <title>Feedback Form</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="heading">Feedback Form</h1>
+        <div class="feedback-form">
+            <h2>Upload Image</h2>
+            <form action="post">
+                <label for="file-upload" class="file-upload-label">
+                    <i class="fa-solid fa-file-arrow-up"></i>
+                    <span>Choose File</span>
+                    <input type="file" id="file-upload" accept="image/*" required>
+                </label>
+                <img src="" id="preview-image" class="image-preview" \>
+
+                <label for="wastage-type">Type of Wastage</label>
+                <input type="text" id="wastage-type" placeholder="Enter the wastage type" required>
+
+                <label for="location">Location</label>
+                <input type="text" id="location" placeholder="Enter the location" required>
+
+                <div class="status-message" id="status-message"></div>
+                <div class="progress-bar" id="progress-bar">
+                    <div class="progress" id="progress"></div>
+                </div>
+
+                <button type="submit" id="submit-button">Submit</button>
+            </form>
+        </div>
+    </div>
+    <script src="../Script/User/report.js"></script>
+</body>
+</html>

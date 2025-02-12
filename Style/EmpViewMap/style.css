@@ -1,0 +1,170 @@
+/* General Reset and Styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+/* Container for Search and Map */
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #34495e;
+  color: #ecf0f1;
+}
+
+.search-box {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  margin-right: 10px;
+  flex: 1;
+}
+
+.search-button, .current-location-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #ffffff;
+  margin-left: 10px;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+.search-button {
+  background-color: #3498db;
+}
+
+.current-location-button {
+  background-color: #2ecc71;
+}
+
+.search-button:hover {
+  background-color: #2980b9;
+}
+
+.current-location-button:hover {
+  background-color: #27ae60;
+}
+
+/* Main Content Styling */
+.content {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+/* Address Column Styling */
+.address-column {
+  width: 30%;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.address-column h2 {
+  color: #2c3e50;
+  margin-top: 0;
+}
+
+.address-column p {
+  margin: 10px 0;
+  color: #7f8c8d;
+}
+
+.toggle-address-list {
+  display: block;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #16a085;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+.toggle-address-list:hover {
+  background-color: #1abc9c;
+}
+
+/* Map Column Styling */
+.map-column {
+  width: 65%;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.map-column h2 {
+  color: #2c3e50;
+  margin-top: 0;
+}
+
+.map-controls {
+  margin-bottom: 20px;
+}
+
+.map-view-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 16px;
+  transition: background 0.3s;
+  margin-right: 10px;
+}
+
+.map-view-button[data-view="street"] {
+  background-color: #3498db;
+}
+
+.map-view-button[data-view="satellite"] {
+  background-color: #e67e22;
+}
+
+.map-view-button[data-view="street"]:hover {
+  background-color: #2980b9;
+}
+
+.map-view-button[data-view="satellite"]:hover {
+  background-color: #d35400;
+}
+
+#map {
+  height: 400px;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.map-legend {
+  margin-top: 20px;
+}
+
+.map-legend h3 {
+  color: #2c3e50;
+  margin-top: 0;
+}
+
+.map-legend ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.map-legend ul li {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #7f8c8d;
+}
