@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Madang.Inc - Hiring</title>
+    <title>Employee Dashboard - Waste Management</title>
     <link rel="stylesheet" href="../Style/employeeHomePage/style.css">
+    <link rel="stylesheet" href="../Style/session.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
@@ -17,34 +18,37 @@
         <div class="navigation">
           <ul>
             <li>
-              
-              <a href="#"><i   class="fa-solid fa-user"></i>User Profile
-              </a>
+              <a href="/userProfile"><i class="fa-solid fa-user"></i>User Profile</a>
             </li>
             <li>
-              <a href="../HTML/empDailyTask.html"><i  class="fa-solid fa-list-check"></i></i>View Daily Task
-              </a>
-            </li><li>
-              <a href="../HTML/empViewMap.html"><i  class="fa-solid fa-map-location-dot"></i></i></i>View Pickup</a>
-            </li><li>
-              <a href="#"><i  class="fa-solid fa-bars-progress"></i></i>View WasteStock</a>
-            </li><li>
+              <a href="../HTML/empDailyTask.html"><i class="fa-solid fa-list-check"></i>View Daily Task</a>
+            </li>
+            <li>
+              <a href="../HTML/empViewMap.html"><i class="fa-solid fa-map-location-dot"></i>View Pickup</a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-solid fa-bars-progress"></i>View WasteStock</a>
+            </li>
+            <li>
               <a href="../HTML/empAlertSection.html"><i class="fa-solid fa-circle-exclamation"></i>Alert</a>
             </li>
             <li>
-              <a href="#"><i  class="fas fa-bell"></i> Notifications</a>
+              <a href="#"><i class="fas fa-bell"></i> Notifications</a>
             </li>
             <li>
-              <a href="#"><i  class="fas fa-envelope"></i> Inbox</a>
+              <a href="#"><i class="fas fa-envelope"></i> Inbox</a>
             </li>
             <li>
-              <a href="../HTML/viewStatistic.html"><i  class="fas fa-chart-bar"></i> Statistic</a>
+              <a href="../HTML/viewStatistic.html"><i class="fas fa-chart-bar"></i> Statistic</a>
             </li>
             <li>
-              <a href=""><i  class="fas fa-sticky-note"></i> Notes</a>
+              <a href=""><i class="fas fa-sticky-note"></i> Notes</a>
             </li>
             <li>
-              <a href="#"><i  class="fas fa-download"></i> Downloaded reports</a>
+              <a href="#"><i class="fas fa-download"></i> Downloaded reports</a>
+            </li>
+            <li class="logout-item">
+              <a href="#" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
             </li>
           </ul>
         </div>
@@ -53,6 +57,12 @@
 
       
         <div class="main-content">
+          <!-- Welcome Section -->
+          <div class="welcome-section" style="background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); color: white; padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+            <h2 style="margin: 0 0 10px 0;">Welcome back, <%= userInfo ? userInfo.name : 'Employee' %>!</h2>
+            <p style="margin: 0; opacity: 0.9;">Employee ID: <%= userInfo ? userInfo.employeeId : 'N/A' %> | Session: <%= userInfo ? Math.floor(userInfo.sessionDuration / 60000) : 0 %> minutes</p>
+          </div>
+          
           <div class="notifications">
             <div class="header">
               <h2>Notifications</h2>
@@ -153,5 +163,52 @@
         </div>
       </div>
     </div>
+
+    <!-- Pass user info to JavaScript -->
+    <% if (typeof userInfo !== 'undefined' && userInfo) { %>
+    <script>
+      const userInfo = {
+        name: '<%= userInfo.name %>',
+        employeeId: '<%= userInfo.employeeId %>',
+        email: '<%= userInfo.email %>',
+        sessionDuration: <%= userInfo.sessionDuration || 0 %>
+      };
+    </script>
+    <% } %>
+
+    <!-- Include session management JavaScript -->
+    <script src="/Script/sessionManager.js"></script>
+    <script>
+      // Add logout functionality
+      document.addEventListener('DOMContentLoaded', function() {
+        const logoutBtn = document.getElementById('logout-btn');
+        if (logoutBtn) {
+          logoutBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            if (confirm('Are you sure you want to logout?')) {
+              fetch('/logout', { method: 'POST' })
+                .then(response => {
+                  if (response.ok) {
+                    window.location.href = '/';
+                  }
+                })
+                .catch(error => {
+                  console.error('Logout failed:', error);
+                  window.location.href = '/';
+                });
+            }
+          });
+        }
+
+        // Debug: Check if User Profile link is working
+        const userProfileLink = document.querySelector('a[href="/userProfile"]');
+        if (userProfileLink) {
+          userProfileLink.addEventListener('click', function(e) {
+            console.log('User Profile link clicked');
+            // Don't prevent default, let the navigation happen
+          });
+        }
+      });
+    </script>
   </body>
 </html>

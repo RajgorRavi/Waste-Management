@@ -195,3 +195,33 @@ body {
 .table button:hover {
   background-color: #27ae60;
 }
+
+/* Logout button styling */
+.logout-item {
+  margin-top: auto;
+  border-top: 1px solid #34495e;
+  padding-top: 10px;
+}
+
+.logout-item a {
+  color: #e74c3c !important;
+  font-weight: bold;
+}
+
+.logout-item a:hover {
+  background-color: #c0392b !important;
+}
+
+/* Welcome section styling */
+.welcome-section {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-section h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.welcome-section p {
+  font-size: 14px;
+}

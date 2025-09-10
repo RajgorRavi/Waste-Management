@@ -1,0 +1,56 @@
+/* Session Management Styles */
+
+/* Removed top-right session info display */
+/*
+.session-info {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  z-index: 1000;
+}
+*/
+
+.logout-btn {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-left: 10px;
+  font-size: 11px;
+}
+
+.logout-btn:hover {
+  background: #c82333;
+}
+
+.session-duration {
+  font-size: 10px;
+  opacity: 0.8;
+}
+
+/* Session timeout warning */
+.session-warning {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff3cd;
+  border: 1px solid #ffeaa7;
+  color: #856404;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 1001;
+  display: none;
+}
+
+.session-warning.show {
+  display: block;
+}

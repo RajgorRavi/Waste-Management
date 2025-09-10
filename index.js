@@ -1,7 +1,10 @@
 const express = require("express");
 const path = require("path");
+const session = require("express-session");
+const MongoStore = require("connect-mongo");
 const { connectToMongoDB } = require("./connect");
 const staticRoute = require("./routes/staticRoute");
+const { sessionActivityTracker, addSessionToLocals } = require("./middlewares/sessionMiddleware");
 const { Script } = require("vm");
 
 
@@ -17,6 +20,28 @@ app.use('/HTML',express.static('HTML'));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+
+// Session configuration
+app.use(session({
+  secret: 'waste-management-secret-key-2024',
+  resave: false,
+  saveUninitialized: false,
+  store: MongoStore.create({
+    mongoUrl: "mongodb://localhost:27017/Waste_Manag_System",
+    collectionName: 'sessions'
+  }),
+  cookie: {
+    secure: false, // set to true in production with HTTPS
+    httpOnly: true,
+    maxAge: 1000 * 60 * 60 * 24 // 24 hours
+  }
+}));
+
+// Session activity tracking middleware
+app.use(sessionActivityTracker);
+
+// Add session data to all responses
+app.use(addSessionToLocals);
 
 
 
@@ -42,5 +67,5 @@ app.use("/homepage",(req,res)=>{
 
 
 
-const PORT = 8000;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server Started at PORT:${PORT}`));

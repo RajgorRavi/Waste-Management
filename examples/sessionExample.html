@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Dashboard - Session Example</title>
+    <link rel="stylesheet" href="/Style/session.css">
+</head>
+<body>
+    <h1>Welcome to Employee Dashboard</h1>
+    
+    <% if (typeof userInfo !== 'undefined' && userInfo) { %>
+        <div class="user-info">
+            <h2>Hello, <%= userInfo.name %>!</h2>
+            <p>Employee ID: <%= userInfo.employeeId %></p>
+            <p>Login Time: <%= new Date(userInfo.loginTime).toLocaleString() %></p>
+            <p>Session Duration: <%= userInfo.sessionDuration %> minutes</p>
+        </div>
+        
+        <!-- Pass user info to JavaScript -->
+        <script>
+            const userInfo = {
+                name: '<%= userInfo.name %>',
+                employeeId: '<%= userInfo.employeeId %>',
+                sessionDuration: <%= userInfo.sessionDuration %>
+            };
+        </script>
+    <% } %>
+
+    <!-- Include session management JavaScript -->
+    <script src="/Script/sessionManager.js"></script>
+    
+    <!-- Your existing page content -->
+    <div class="dashboard-content">
+        <!-- Your dashboard content here -->
+    </div>
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>User Profile - Waste Management</title>
+    <link rel="stylesheet" href="/Style/employeeHomePage/style.css">
+    <link rel="stylesheet" href="/Style/userProfile/profile.css">
+    <link rel="stylesheet" href="/Style/session.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="sidebar">
+        <div class="header">
+          <div class="logo">Dash Board</div>
+        </div>
+        <div class="search-bar">
+          <input type="text" placeholder="Search" />
+        </div>
+        <div class="navigation">
+          <ul>
+            <li>
+              <a href="/userProfile" class="active"><i class="fa-solid fa-user"></i>User Profile</a>
+            </li>
+            <li>
+              <a href="../HTML/empDailyTask.html"><i class="fa-solid fa-list-check"></i>View Daily Task</a>
+            </li>
+            <li>
+              <a href="../HTML/empViewMap.html"><i class="fa-solid fa-map-location-dot"></i>View Pickup</a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-solid fa-bars-progress"></i>View WasteStock</a>
+            </li>
+            <li>
+              <a href="../HTML/empAlertSection.html"><i class="fa-solid fa-circle-exclamation"></i>Alert</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-bell"></i> Notifications</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-envelope"></i> Inbox</a>
+            </li>
+            <li>
+              <a href="../HTML/viewStatistic.html"><i class="fas fa-chart-bar"></i> Statistic</a>
+            </li>
+            <li>
+              <a href=""><i class="fas fa-sticky-note"></i> Notes</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-download"></i> Downloaded reports</a>
+            </li>
+            <li class="logout-item">
+              <a href="#" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- main Section  -->
+      <div class="main-content">
+        <!-- Profile Header -->
+        <div class="profile-header">
+          <div class="profile-banner">
+            <div class="profile-avatar">
+              <i class="fas fa-user-circle"></i>
+            </div>
+            <div class="profile-info">
+              <h1><%= userInfo ? userInfo.name : 'Employee' %></h1>
+              <p class="profile-title">Waste Management Employee</p>
+              <p class="profile-id">ID: <%= userInfo ? userInfo.employeeId : 'N/A' %></p>
+            </div>
+            <div class="profile-actions">
+              <button class="btn btn-primary" id="edit-profile-btn">
+                <i class="fas fa-edit"></i> Edit Profile
+              </button>
+              <button class="btn btn-danger" id="logout-profile-btn">
+                <i class="fas fa-sign-out-alt"></i> Logout
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Profile Content -->
+        <div class="profile-content">
+          <!-- Personal Information Card -->
+          <div class="profile-card">
+            <div class="card-header">
+              <h3><i class="fas fa-user"></i> Personal Information</h3>
+            </div>
+            <div class="card-content">
+              <div class="info-group">
+                <div class="info-item">
+                  <label>Full Name:</label>
+                  <span id="display-name"><%= userInfo ? userInfo.name : 'N/A' %></span>
+                  <input type="text" id="edit-name" value="<%= userInfo ? userInfo.name : '' %>" style="display: none;">
+                </div>
+                <div class="info-item">
+                  <label>Employee ID:</label>
+                  <span><%= userInfo ? userInfo.employeeId : 'N/A' %></span>
+                </div>
+                <div class="info-item">
+                  <label>Email:</label>
+                  <span id="display-email"><%= userInfo ? userInfo.email : 'N/A' %></span>
+                  <input type="email" id="edit-email" value="<%= userInfo ? userInfo.email : '' %>" style="display: none;">
+                </div>
+                <div class="info-item">
+                  <label>Department:</label>
+                  <span>Waste Collection & Management</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Session Information Card -->
+          <div class="profile-card">
+            <div class="card-header">
+              <h3><i class="fas fa-clock"></i> Session Information</h3>
+            </div>
+            <div class="card-content">
+              <div class="info-group">
+                <div class="info-item">
+                  <label>Login Time:</label>
+                  <span><%= userInfo ? new Date(userInfo.loginTime).toLocaleString() : 'N/A' %></span>
+                </div>
+                <div class="info-item">
+                  <label>Session Duration:</label>
+                  <span id="session-duration"><%= userInfo ? Math.floor(userInfo.sessionDuration / 60000) : 0 %> minutes</span>
+                </div>
+                <div class="info-item">
+                  <label>Last Activity:</label>
+                  <span id="last-activity"><%= userInfo ? new Date(userInfo.lastActivity).toLocaleString() : 'N/A' %></span>
+                </div>
+                <div class="info-item">
+                  <label>Session Status:</label>
+                  <span class="status-active"><i class="fas fa-circle"></i> Active</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Account Settings Card -->
+          <div class="profile-card">
+            <div class="card-header">
+              <h3><i class="fas fa-cog"></i> Account Settings</h3>
+            </div>
+            <div class="card-content">
+              <div class="settings-group">
+                <button class="btn btn-outline" id="change-password-btn">
+                  <i class="fas fa-lock"></i> Change Password
+                </button>
+                <button class="btn btn-outline" id="download-data-btn">
+                  <i class="fas fa-download"></i> Download My Data
+                </button>
+                <button class="btn btn-outline" id="activity-log-btn">
+                  <i class="fas fa-history"></i> View Activity Log
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Statistics Card -->
+          <div class="profile-card">
+            <div class="card-header">
+              <h3><i class="fas fa-chart-bar"></i> My Statistics</h3>
+            </div>
+            <div class="card-content">
+              <div class="stats-grid">
+                <div class="stat-item">
+                  <div class="stat-value">24</div>
+                  <div class="stat-label">Tasks Completed</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-value">156</div>
+                  <div class="stat-label">Waste Collections</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-value">89%</div>
+                  <div class="stat-label">Efficiency Rate</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-value">12</div>
+                  <div class="stat-label">Days Active</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pass user info to JavaScript -->
+    <% if (typeof userInfo !== 'undefined' && userInfo) { %>
+    <script>
+      const userInfo = {
+        name: '<%= userInfo.name %>',
+        employeeId: '<%= userInfo.employeeId %>',
+        email: '<%= userInfo.email %>',
+        sessionDuration: <%= userInfo.sessionDuration || 0 %>
+      };
+    </script>
+    <% } %>
+
+    <!-- Include session management JavaScript -->
+    <script src="/Script/sessionManager.js"></script>
+    <script src="/Script/userProfile.js"></script>
+  </body>
+</html>
